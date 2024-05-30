@@ -3,7 +3,7 @@ import requests as sheet
 import smtplib
 
 app = Flask(__name__)
-
+api_url = "https://dashboard.sheety.co/projects/65d06017ec339004d7c680dc/sheets/sheet1"
 
 @app.route("/")
 def home_page():
@@ -26,6 +26,7 @@ def submit_form():
         }
     }
     sheet.post("https://api.sheety.co/06611c666efcc4e05beb6ca9c244f4fa/visitors/sheet1", json=data)
+
 
     # sending mail
     # my_email = "nikhiltelase17@gmail.com"
